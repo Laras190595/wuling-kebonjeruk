@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wuling Kebon Jeruk Promo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+    header {
+      background: url('head.jpg') center/cover no-repeat;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+      color: #1a1a1a;
+    }
+    .promo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+    .car-showcase {
+      flex: 1;
+      max-width: 500px;
+    }
+    .car-showcase img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .color-selector {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .color-selector button {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid #333;
+      cursor: pointer;
+    }
+    .specs {
+      flex: 1;
+      max-width: 500px;
+    }
+    .spec-box {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      background: white;
+    }
+    .spec-box h3 {
+      margin: 0;
+      cursor: pointer;
+    }
+    .spec-content {
+      display: none;
+      margin-top: 10px;
+    }
+    .gallery {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 20px;
+      background: #fff0f0;
+    }
+    .gallery img {
+      height: 150px;
+      margin-right: 10px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 40px 20px;
+      background: #fff;
+    }
+    .profile img {
+      border-radius: 50%;
+      width: 200px;
+    }
+    .profile-info {
+      font-size: 1.2rem;
+      color: #222;
+    }
+    @media(max-width: 768px) {
+      .promo, .profile {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    DAPATKAN PENAWARAN MENARIK DI BULAN INI…<br />DI WULING KEBON JERUK…
+  </header>
+
+  <h2>PROMO Mobil Binggo</h2>
+  <div class="promo">
+    <div class="car-showcase">
+      <img id="binggoImage" src="binggo1.jpg" alt="Mobil Binggo">
+      <div class="color-selector">
+        <button style="background:red" onclick="changeCarImage('binggo1.jpg')"></button>
+        <button style="background:blue" onclick="changeCarImage('binggo2.jpg')"></button>
+        <button style="background:green" onclick="changeCarImage('binggo3.jpg')"></button>
+      </div>
+    </div>
+    <div class="specs">
+      <div class="spec-box">
+        <h3 onclick="toggleSpec(this)">DIMENSION</h3>
+        <div class="spec-content">
+          <ul>
+            <li>3,950 x 1,708 x 1,580 mm</li>
+            <li>Wheelbase: 2,560 mm</li>
+            <li>15" steel wheel, 185/60 R15</li>
+            <li>Brakes: Disc (Front) + Disc (Rear)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="spec-box">
+        <h3 onclick="toggleSpec(this)">MAIN BATTERY AND POWERTRAIN</h3>
+        <div class="spec-content">
+          <ul>
+            <li>Lithium Ferro-Phosphate; IP67 Rating</li>
+            <li>Capacity: 31.9 kWh</li>
+            <li>Drive Motor: 50 Kw</li>
+            <li>Transmission: Single Reduction Gear</li>
+          </ul>
+        </div>
+      </div>
+      <div class="spec-box">
+        <h3 onclick="toggleSpec(this)">INTERIOR</h3>
+        <div class="spec-content">
+          <ul>
+            <li>Glossy ceramic & synthetic leather</li>
+            <li>Perforated synthetic leather seats</li>
+            <li>Leather-covered steering wheel</li>
+            <li>2 x 10.25" TFT Display</li>
+            <li>Rotary Gear Selector</li>
+            <li>Driver seat 6-way electric adjust</li>
+            <li>15 Storage Spaces</li>
+            <li>790 L baggage (seat folded)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="spec-box">
+        <h3 onclick="toggleSpec(this)">SAFETY & PROTECTION</h3>
+        <div class="spec-content">
+          <ul>
+            <li>Dual Front Airbags</li>
+            <li>ABS and EBD</li>
+            <li>Electric Parking Brake + AVH</li>
+            <li>Electronic Stability Control</li>
+            <li>Rear Sensor + Camera</li>
+            <li>ISOFIX</li>
+            <li>TPMS</li>
+            <li>Immobilizer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>TERIMA KASIH ATAS KEPERCAYAAN KEPADA SEKAR</h2>
+  <div class="gallery" onmouseover="pauseScroll()" onmouseout="resumeScroll()">
+    <img src="serah1.jpg" alt="Serah 1">
+    <img src="serah2.jpg" alt="Serah 2">
+    <img src="serah3.jpg" alt="Serah 3">
+    <img src="serah4.jpg" alt="Serah 4">
+    <img src="serah5.jpg" alt="Serah 5">
+    <img src="serah6.jpg" alt="Serah 6">
+    <img src="serah7.jpg" alt="Serah 7">
+    <img src="serah8.jpg" alt="Serah 8">
+  </div>
+
+  <div class="profile">
+    <img src="foto-diri.jpg" alt="Foto Sekar">
+    <div class="profile-info">
+      <strong>SEKAR</strong><br />
+      WhatsApp: 0895 – 3095 – 1783<br />
+      IG: @la_sekarini
+    </div>
+  </div>
+
+  <script>
+    function changeCarImage(filename) {
+      document.getElementById('binggoImage').src = filename;
+    }
+
+    function toggleSpec(element) {
+      const content = element.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+
+    let gallery = document.querySelector('.gallery');
+    let scrollInterval = setInterval(() => {
+      gallery.scrollLeft += 1;
+    }, 30);
+
+    function pauseScroll() {
+      clearInterval(scrollInterval);
+    }
+    function resumeScroll() {
+      scrollInterval = setInterval(() => {
+        gallery.scrollLeft += 1;
+      }, 30);
+    }
+  </script>
+</body>
+</html>
